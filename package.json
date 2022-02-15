@@ -1,5 +1,5 @@
 {
-  "name": "@codemirror/language",
+  "name": "@craftzdog/cm6-language",
   "version": "0.19.7",
   "description": "Language support infrastructure for the CodeMirror code editor",
   "scripts": {
