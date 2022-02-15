@@ -227,15 +227,15 @@ class DocInput implements Input {
 
 const enum Work {
   // Milliseconds of work time to perform immediately for a state doc change
-  Apply = 20,
+  Apply = 200,
   // Minimum amount of work time to perform in an idle callback
-  MinSlice = 25,
+  MinSlice = 250,
   // Amount of work time to perform in pseudo-thread when idle callbacks aren't supported
-  Slice = 100,
+  Slice = 1000,
   // Minimum pause between pseudo-thread slices
-  MinPause = 100,
+  MinPause = 1000,
   // Maximum pause (timeout) for the pseudo-thread
-  MaxPause = 500,
+  MaxPause = 5000,
   // Parse time budgets are assigned per chunk—the parser can run for
   // ChunkBudget milliseconds at most during ChunkTime milliseconds.
   // After that, no further background parsing is scheduled until the
@@ -245,7 +245,7 @@ const enum Work {
   // For every change the editor receives while focused, it gets a
   // small bonus to its parsing budget (as a way to allow active
   // editors to continue doing work).
-  ChangeBonus = 50,
+  ChangeBonus = 500,
   // Don't eagerly parse this far beyond the end of the viewport
   MaxParseAhead = 1e5,
   // When initializing the state field (before viewport info is
